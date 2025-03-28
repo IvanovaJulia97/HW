@@ -157,12 +157,14 @@ func ToMorse(str string) string {
 func ToText(code string) string {
 	var resultText []rune
 
-	text := strings.Split(code, " / ")
+	text := strings.Split(code, "   ")
 	for _, w := range text {
 		word := strings.Split(w, " ")
 		for _, l := range word {
 			if val, exists := reverseMorse[l]; exists {
 				resultText = append(resultText, val)
+			} else {
+				resultText = append(resultText, '?')
 			}
 		}
 		resultText = append(resultText, ' ')
