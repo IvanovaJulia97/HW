@@ -303,7 +303,9 @@ var DefaultConverter = NewConverter(
 )
 
 // ToText converts a morse string to his textual representation, it is an alias to DefaultConverter.ToText.
-func ToText(morse string) string { return DefaultConverter.ToText(morse) }
+func ToText(morse string) string {
+	return DefaultConverter.ToText(morse)
+}
 
 // ToMorse converts a text to his morse rrpresentation, it is an alias to DefaultConverter.ToMorse.
 func ToMorse(text string) string { return DefaultConverter.ToMorse(text) }
